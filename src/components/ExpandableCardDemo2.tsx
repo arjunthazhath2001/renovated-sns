@@ -71,8 +71,8 @@ export function ExpandableCardDemo2() {
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
                   priority
-                  width={500}
-                  height={500}
+                  width={1000}
+                  height={1000}
                   src={active.src}
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-center"
@@ -88,15 +88,19 @@ export function ExpandableCardDemo2() {
                     >
                       {active.title}
                     </motion.h3>
+
+                   
+
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400"
+                      className="text-neutral-600 dark:text-neutral-400 mb-5"
                     >
                       {active.description}
                     </motion.p>
-                  </div>
 
-                  <motion.a
+
+                     
+                    <motion.a
                     layoutId={`button-${active.title}-${id}`}
                     href={active.ctaLink}
                     target="_blank"
@@ -104,6 +108,10 @@ export function ExpandableCardDemo2() {
                   >
                     {active.ctaText}
                   </motion.a>
+
+                  </div>
+
+                 
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -123,34 +131,34 @@ export function ExpandableCardDemo2() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full gap-4">
+      <ul className="max-w-2xl mx-auto w-full gap-4 sm:space-y-3">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col md:flex-row">
+            <div className="flex gap-3 sm:gap-4 flex-row items-center">
               <motion.div layoutId={`image-${card.title}-${id}`}>
-                <Image
-                  width={100}
-                  height={100}
+              <Image
+                  width={1000}
+                  height={1000}
                   src={card.src}
                   alt={card.title}
-                  className="h-32 w-32 md:h-14 md:w-14 rounded-lg object-cover object-center"
+                  className="h-10 w-10 rounded-md sm:h-12 sm:w-12 md:h-16 md:w-16 sm:rounded-lg object-cover object-center"
                 />
               </motion.div>
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-sm text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                  className="font-bold text-[11px] sm:text-sm text-neutral-800 dark:text-neutral-200 text-left"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 text-sm dark:text-neutral-400 text-center md:text-left"
+                  className="text-neutral-600 text-[9px] sm:text-sm dark:text-neutral-400 text-left"
                 >
                   {card.description}
                 </motion.p>
@@ -159,7 +167,7 @@ export function ExpandableCardDemo2() {
 
             <motion.button
               layoutId={`button-${card.title}-${id}`}
-              className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-yellow-500 hover:text-white text-black ml-8 mt-4 md:mt-0"
+              className="px-2 py-2 sm:px-4 sm:py-2 text-[5px] sm:text-sm rounded-full font-bold transition-colors duration-100 bg-black text-white dark:bg-gray-100 dark:hover:text-black dark:hover:bg-yellow-500 hover:text-black hover:bg-yellow-500  dark:text-black sm:ml-8 sm:mt-4 mt-0 "
             >
               {card.ctaText}
             </motion.button>
@@ -202,12 +210,17 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
+
 const cards = [
     {
       description: "Accredited by NAAC-UGC with 'A+' Grade",
-      title: "Dr.SNS Rajalakshmi College of Arts and Sciences",
+      title: (
+        <>
+          Dr.SNS Rajalakshmi College of <br /> Arts and Sciences
+        </>
+      ),
       src: "/images/card6.png",
-      ctaText: "CLICK HERE",
+      ctaText: "KNOW MORE",
       ctaLink: "https://drsnsrcas.ac.in/",
       content: () => {
         return (
@@ -221,7 +234,7 @@ const cards = [
       description: "Accredited by NAAC with 'A++' Grade",
       title: "SNS College of Technology",
       src: "/images/card7.png",
-      ctaText: "CLICK HERE",
+      ctaText: "KNOW MORE",
       ctaLink: "https://snsct.org/",
       content: () => {
         return (
@@ -236,7 +249,7 @@ SNS College of Technology, Coimbatore, is renowned for excellence in teaching, l
       description: "Accredited by NAAC-UGC with 'A' Grade",
       title: "SNS College of Engineering",
       src: "/images/card8.png",
-      ctaText: "CLICK HERE",
+      ctaText: "KNOW MORE",
       ctaLink: "https://snsce.ac.in/",
       content: () => {
         return (
@@ -247,10 +260,14 @@ SNS College of Technology, Coimbatore, is renowned for excellence in teaching, l
       },
     },
     {
-      description: "Affiliated to the TN Dr.MGR Medical University",
-      title: "SNS College of Pharmacy and Health Sciences",
+      description: "Aff. to the TN Dr.MGR Medical University",
+      title: (
+        <>
+          SNS College of Pharmacy <br /> and Health Sciences
+        </>
+      ),
       src: "/images/card9.png",
-      ctaText: "CLICK HERE",
+      ctaText: "KNOW MORE",
       ctaLink: "https://snscphs.org/",
       content: () => {
         return (
@@ -262,10 +279,14 @@ SNS College of Pharmacy, produces holistic, industry-ready graduates with strong
       },
     },
     {
-      description: "Affiliated to the TN Dr MGR Medical University",
-      title: "SNS College of Allied Health Sciences",
+      description: "Aff. to the TN Dr MGR Medical University",
+      title: (
+        <>
+          SNS College of Allied <br /> Health Sciences
+        </>
+      ),
       src: "/images/card10.png",
-      ctaText: "CLICK HERE",
+      ctaText: "KNOW MORE",
       ctaLink: "https://snscahs.org/",
       content: () => {
         return (

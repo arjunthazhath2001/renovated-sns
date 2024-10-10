@@ -8,25 +8,25 @@ export default function AcademicsPage() {
     <div className="flex flex-col w-full">
       {/* Section 1 */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-4xl text-center">       
+        <div className="w-full text-center">       
           <SparklesPreview/>
         </div>
       </section>
 
       {/* Section 2 */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-4xl text-center">
+        <div className="w-full text-center">
           
           <ProgrammesOffered/>
         </div>
       </section>
 
       {/* Section 3 */}
-      {/* <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-4xl text-center">
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6">
+        <div className="w-full text-center">
           <Institutions/>
         </div>
-      </section> */}
+      </section>
 
       {/* Section 4 */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
