@@ -1,3 +1,5 @@
+import { ProgrammesOffered } from '@/components/ProgrammesOffered'
+import { SparklesPreview } from '@/components/SparklesPreview'
 import React from 'react'
 
 export default function AcademicsPage() {
@@ -5,25 +7,16 @@ export default function AcademicsPage() {
     <div className="flex flex-col w-full">
       {/* Section 1 */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
-            Section 1: Our Academics
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mt-4">
-            Learn about our academic programs and excellence in education.
-          </p>
+        <div className="w-full max-w-4xl text-center">       
+          <SparklesPreview/>
         </div>
       </section>
 
       {/* Section 2 */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
-            Section 2: Programs Offered
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mt-4">
-            Explore the diverse programs offered at our institution.
-          </p>
+          
+          <ProgrammesOffered/>
         </div>
       </section>
 
