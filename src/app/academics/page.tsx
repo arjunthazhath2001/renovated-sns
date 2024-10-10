@@ -1,3 +1,4 @@
+import Institutions from '@/components/Institutions'
 import { ProgrammesOffered } from '@/components/ProgrammesOffered'
 import { SparklesPreview } from '@/components/SparklesPreview'
 import React from 'react'
@@ -21,16 +22,11 @@ export default function AcademicsPage() {
       </section>
 
       {/* Section 3 */}
-      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      {/* <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-gray-800 dark:text-white">
-            Section 3: Our Institutions
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mt-4">
-            Discover our contributions to groundbreaking research.
-          </p>
+          <Institutions/>
         </div>
-      </section>
+      </section> */}
 
       {/* Section 4 */}
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">

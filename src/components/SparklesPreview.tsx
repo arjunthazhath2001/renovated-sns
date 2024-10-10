@@ -4,7 +4,7 @@ import React from "react";
 
 export function SparklesPreview() {
   return (
-    <div className="w-full bg-transparent flex flex-col items-center justify-center overflow-hidden rounded-md">
+    <div className=" w-full bg-transparent flex flex-col pt-24 items-center justify-center overflow-hidden rounded-md">
       <h1 className="sm:text-3xl md:text-3xl text-4xl lg:text-6xl font-extrabold text-center text-black dark:text-white relative z-20">
         OUR
       </h1>
@@ -18,18 +18,6 @@ export function SparklesPreview() {
         <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-yellow-500 dark:via-yellow-400 to-transparent h-[5px] w-1/4 blur-sm" />
         <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-yellow-500 dark:via-yellow-400 to-transparent h-px w-1/4" />
 
-        {/* Core component */}
-        {/* <SparklesCore
-          background="transparent"
-          minSize={0.4}
-          maxSize={1}
-          particleDensity={1200}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
-
-        
-        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div> */}
       </div>
     </div>
   );
