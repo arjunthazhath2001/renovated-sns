@@ -73,7 +73,7 @@ const SheetContent = React.forwardRef<
       <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm ring-offset-background transition-opacity focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-yellow-400 hover:text-yellow-500"
+          className="h-6 w-6 text-red-500 hover:text-red-600"
           viewBox="0 0 24 24"
           stroke="currentColor"
           fill="none"

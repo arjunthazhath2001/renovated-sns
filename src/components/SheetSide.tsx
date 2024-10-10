@@ -16,7 +16,7 @@ const MENU_ITEMS = [
   { name: "Academics", href: "/academics" },
   { name: "Admissions", href: "/admissions" },
   { name: "Research", href: "/research" },
-  { name: "Campus Life", href: "/campus-life" },
+  { name: "Campus Life", href: "/campuslife" },
   { name: "Careers", href: "/careers" },
   { name: "100x Login", href: "/100x-dashboard" },
   
